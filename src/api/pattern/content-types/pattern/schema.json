@@ -24,7 +24,7 @@
     "tool": {
       "type": "enumeration",
       "enum": [
-        "spokes",
+        "needles",
         "hook"
       ]
     },
