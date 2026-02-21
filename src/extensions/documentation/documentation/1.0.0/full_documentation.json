@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-17T10:55:27.538Z"
+    "x-generation-date": "2026-02-21T17:36:43.864Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -2643,7 +2643,9 @@
                 "shortDescription": {
                   "type": "string"
                 },
-                "description": {},
+                "description": {
+                  "type": "string"
+                },
                 "cover": {
                   "type": "object",
                   "properties": {
@@ -4289,6 +4291,10 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "title",
+              "slug"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -4307,7 +4313,9 @@
               "shortDescription": {
                 "type": "string"
               },
-              "description": {},
+              "description": {
+                "type": "string"
+              },
               "cover": {
                 "oneOf": [
                   {
@@ -4422,6 +4430,10 @@
       },
       "Pattern": {
         "type": "object",
+        "required": [
+          "title",
+          "slug"
+        ],
         "properties": {
           "id": {
             "oneOf": [
@@ -4452,7 +4464,9 @@
           "shortDescription": {
             "type": "string"
           },
-          "description": {},
+          "description": {
+            "type": "string"
+          },
           "cover": {
             "type": "object",
             "properties": {
@@ -5749,7 +5763,9 @@
                       "shortDescription": {
                         "type": "string"
                       },
-                      "description": {},
+                      "description": {
+                        "type": "string"
+                      },
                       "cover": {
                         "type": "object",
                         "properties": {

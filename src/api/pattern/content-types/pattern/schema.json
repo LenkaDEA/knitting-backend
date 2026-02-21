@@ -12,11 +12,14 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
     "tool": {
       "type": "enumeration",
@@ -29,7 +32,7 @@
       "type": "text"
     },
     "description": {
-      "type": "blocks"
+      "type": "text"
     },
     "cover": {
       "type": "media",
