@@ -4,3 +4,6 @@ build
 .tmp
 .git
 .env
+certbot
+data
+nginx

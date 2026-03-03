@@ -24,7 +24,7 @@
   },
   "servers": [
     {
-      "url": "http://urick0s.ru/api",
+      "url": "https://urick0s.ru/api",
       "description": "Development server"
     }
   ],
