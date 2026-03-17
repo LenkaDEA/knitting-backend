@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-03-03T20:31:16.108Z"
+    "x-generation-date": "2026-03-17T18:35:54.077Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -24,7 +24,7 @@
   },
   "servers": [
     {
-      "url": "https://urick0s.ru/api",
+      "url": "http://localhost:1337/api",
       "description": "Development server"
     }
   ],
@@ -3937,6 +3937,27 @@
                           }
                         }
                       },
+                      "patterns": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -4132,6 +4153,24 @@
                     }
                   }
                 },
+                "author": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -4300,8 +4339,7 @@
         "properties": {
           "data": {
             "required": [
-              "title",
-              "slug"
+              "title"
             ],
             "type": "object",
             "properties": {
@@ -4380,6 +4418,17 @@
                   "example": "string or id"
                 }
               },
+              "author": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
               "locale": {
                 "type": "string"
               },
@@ -4439,8 +4488,7 @@
       "Pattern": {
         "type": "object",
         "required": [
-          "title",
-          "slug"
+          "title"
         ],
         "properties": {
           "id": {
@@ -6265,6 +6313,24 @@
                           }
                         }
                       },
+                      "author": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "oneOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ]
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -6336,6 +6402,27 @@
                             }
                           }
                         }
+                      }
+                    }
+                  }
+                },
+                "patterns": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "oneOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "documentId": {
+                        "type": "string"
                       }
                     }
                   }
@@ -6433,6 +6520,24 @@
                 "documentId": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "author": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ]
+              },
+              "documentId": {
+                "type": "string"
               }
             }
           },
