@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-03-17T10:54:34.209Z"
+    "x-generation-date": "2026-03-17T18:35:54.077Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -3937,21 +3937,24 @@
                           }
                         }
                       },
-                      "pattern": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "oneOf": [
-                              {
-                                "type": "string"
-                              },
-                              {
-                                "type": "number"
-                              }
-                            ]
-                          },
-                          "documentId": {
-                            "type": "string"
+                      "patterns": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                }
+                              ]
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
                           }
                         }
                       },
@@ -4336,8 +4339,7 @@
         "properties": {
           "data": {
             "required": [
-              "title",
-              "slug"
+              "title"
             ],
             "type": "object",
             "properties": {
@@ -4486,8 +4488,7 @@
       "Pattern": {
         "type": "object",
         "required": [
-          "title",
-          "slug"
+          "title"
         ],
         "properties": {
           "id": {
@@ -6405,21 +6406,24 @@
                     }
                   }
                 },
-                "pattern": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "number"
-                        }
-                      ]
-                    },
-                    "documentId": {
-                      "type": "string"
+                "patterns": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "oneOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "documentId": {
+                        "type": "string"
+                      }
                     }
                   }
                 },

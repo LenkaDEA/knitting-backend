@@ -72,9 +72,9 @@
       "target": "api::pattern.pattern",
       "mappedBy": "users"
     },
-    "pattern": {
+    "patterns": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::pattern.pattern",
       "mappedBy": "author"
     }

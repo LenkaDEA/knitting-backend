@@ -19,7 +19,7 @@
     "slug": {
       "type": "uid",
       "targetField": "title",
-      "required": true
+      "required": false
     },
     "tool": {
       "type": "enumeration",
@@ -71,9 +71,9 @@
     },
     "author": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "pattern"
+      "inversedBy": "patterns"
     }
   }
 }
