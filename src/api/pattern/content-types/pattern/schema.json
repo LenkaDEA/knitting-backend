@@ -68,6 +68,12 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "patterns"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "pattern"
     }
   }
 }
