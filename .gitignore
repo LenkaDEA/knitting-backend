@@ -144,3 +144,7 @@ build/
 # Database (SQLite)
 .tmp/*.db
 .tmp/*.db-journal
+data/
+
+# Certificates
+certbot/
