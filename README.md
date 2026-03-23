@@ -1,61 +1,80 @@
-# 🚀 Getting started with Strapi
+# ![Logo](https://raw.githubusercontent.com/LenkaDEA/knitting-next/main/.github/assets/mainLogo.svg) Knitting Backend
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+<p align="center">
+  <b>English</b> • <a href="README.ru.md">Русский</a>
+</p>
 
-### `develop`
+<div align="center">
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+![Strapi](https://img.shields.io/badge/Strapi_5-2F2E8B?style=for-the-badge&logo=strapi&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Yandex Cloud](https://img.shields.io/badge/Yandex_S3-FF0000?style=for-the-badge&logo=yandex&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
+</div>
+
+The backend service for the knitting digital platform. It provides the REST API, content management capabilities, and secure media storage.
+
+## Features
+- **REST API:** Delivering structured data to the client application (Next.js).
+- **Admin Panel:** User-friendly CMS interface for creating, editing, and moderating content.
+- **S3 Integration:** Automatic image uploads and secure storage in Yandex Object Storage.
+- **Access Management:** Configurable roles, user permissions, and secure JWT authentication.
+- **Database:** Relational database for organized storage of tutorials, patterns, and user data.
+
+## Tech Stack
+
+- **Core:** Strapi 5 (Headless CMS).
+- **Database:** SQLite.
+- **Storage:** Yandex Object Storage (S3-compatible cloud storage).
+- **Infrastructure:** Docker, Docker Compose, Nginx.
+
+## Environment Setup
+Create a `.env` file in the root of the project. To ensure Strapi and the S3 plugin function correctly, add the following variables:
+```env
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=your_app_keys
+API_TOKEN_SALT=your_api_token_salt
+ADMIN_JWT_SECRET=your_admin_jwt_secret
+TRANSFER_TOKEN_SALT=your_transfer_token_salt
+ENCRYPTION_KEY=your_encryption_key
+
+# S3 Settings (Yandex Cloud)
+AWS_ACCESS_KEY_ID=your_key_id
+AWS_ACCESS_SECRET=your_secret
+AWS_REGION=eu-central-1
+AWS_BUCKET=your_bucket_name
+AWS_ENDPOINT=https://endpoint_url
 ```
-npm run develop
+
+*(Tip: Base keys for local development are automatically generated during Strapi project initialization).*
+
+## Local Development
+This repository handles only the server-side API. To display the user interface, you will also need to run the frontend application.
+
+- Frontend Repository: [knitting-next](https://github.com/LenkaDEA/knitting-next)
+
+### Running the Project
+1. Clone the repository and navigate to the project directory:
+```bash
+git clone https://github.com/LenkaDEA/knitting-backend.git
+cd knitting-backend
+```
+2. Install dependencies using your preferred package manager:
+```bash
+npm install
 # or
-yarn develop
+yarn install
 ```
-
-### `start`
-
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
+3. Start the server in development mode:
+```bash
+npm run dev
 # or
-yarn start
+yarn dev
 ```
+4. Open the Admin Panel: Content management is available at http://localhost:1337/admin.
 
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
